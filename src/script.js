@@ -9,8 +9,8 @@ class Task {
   taskTemplate() {
     return `
     <li class="task-item d-flex justify-content-between">
-    <span>${this.task}</span
-    ><i class="icon" data-feather="check-circle"></i>
+      <span>${this.task}</span>
+      <i class="icon" data-feather="check-circle"></i>
     </li>
     `;
   }
@@ -23,13 +23,14 @@ class App {
   #tasksSection = document.querySelector('.tasks-section');
 
   constructor() {
-    this.#taskAddBtn.addEventListener(
+    this.#taskAddBtn.addEventListener('click', this._addTaskHandler.bind(this));
+    this.#taskContainer.addEventListener(
       'click',
-      this._addTaskBtnHandler.bind(this)
+      this._taskDoneHandler.bind(this)
     );
   }
 
-  _addTaskBtnHandler() {
+  _addTaskHandler() {
     const userInput = this.#taskUserInput.value.trim();
 
     if (!userInput) return;
@@ -41,6 +42,21 @@ class App {
     feather.replace();
 
     this._clearInput();
+  }
+
+  _taskDoneHandler(e) {
+    if (!e.target.classList.contains('icon')) return;
+    console.log('clicked');
+
+    const taskElement = e.target.closest('.task-item');
+
+    console.log(taskElement);
+
+    taskElement.remove();
+
+    if (!this.#taskContainer.childElementCount) {
+      this._hideTasksSection();
+    }
   }
 
   _render(data) {
