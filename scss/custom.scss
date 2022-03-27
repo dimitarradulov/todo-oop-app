@@ -1,0 +1,12 @@
+$font-family-sans-serif: 'Barlow', sans-serif;
+$headings-font-weight: 700;
+
+.icon {
+  cursor: pointer;
+}
+
+.task-item:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap';

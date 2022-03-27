@@ -1,0 +1,31 @@
+{
+  "name": "todo-oop-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/script.js",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build --public-url ./ ./src/index.html --experimental-scope-hoisting --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimitarradulov/todo-oop-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimitarradulov/todo-oop-app/issues"
+  },
+  "homepage": "https://github.com/dimitarradulov/todo-oop-app#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.0",
+    "core-js": "^3.21.1",
+    "parcel": "^2.4.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.4",
+    "bootstrap": "^5.1.3",
+    "feather-icons": "^4.28.0"
+  }
+}
