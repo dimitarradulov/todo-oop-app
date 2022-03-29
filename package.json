@@ -2,10 +2,10 @@
   "name": "todo-oop-app",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/script.js",
+  "default": "./src/index.html",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel build --public-url ./ ./src/index.html --experimental-scope-hoisting --out-dir dist"
+    "build": "parcel build ./src/index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
