@@ -25,4 +25,5 @@ $ npm start
 
 ## Quick preview
 You can check out the app here:
-<a href="https://oop-todo.netlify.app" target="_blank">To-Do App (OOP)</a>
+<a href="https://oop-todo.netlify.app" target="_blank">To-Do App (OOP)</a> 
+(WARNING: Opens in the same tab)
